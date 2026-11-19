@@ -1,0 +1,14 @@
+pandas>=3.0.5
+numpy
+requests>=2.32.0
+python-dotenv>=1.0.0
+openpyxl>=3.1.5
+matplotlib>=3.11.1
+scikit-learn>=1.9.0
+statsmodels>=0.15.0
+scipy
+xgboost
+nbclient
+nbformat
+ipykernel
+numba

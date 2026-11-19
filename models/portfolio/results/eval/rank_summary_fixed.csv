@@ -1,0 +1,7 @@
+unit,spearman_rho_all,spearman_rho_without_hist_rw,best_forecast_model,best_portfolio_model,hist_rw_forecast_rank,hist_rw_portfolio_rank
+XLB,0.13636363636363638,0.0303030303030303,garch_midas_baa10y,xgb_no_vix,11,8
+XLE,0.4272727272727273,0.41818181818181815,garch,en_full_macro,5,6
+XLF,0.24545454545454545,0.24848484848484845,garch,garch,11,7
+XLI,0.28181818181818186,0.309090909090909,garch,garch,10,6
+XLY,-0.15454545454545454,0.07878787878787878,garch,xgb_no_macro,11,3
+Cyclical,0.20000000000000004,0.35757575757575755,garch,garch_midas_baa10y,11,4

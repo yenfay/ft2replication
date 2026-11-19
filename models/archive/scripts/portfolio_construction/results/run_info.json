@@ -1,0 +1,43 @@
+{
+  "selected": {
+    "Garch": [
+      "garch",
+      "garch_midas_baa10y"
+    ],
+    "HAR OLS": [
+      "ols_1m",
+      "ols_1_3_12m"
+    ],
+    "Elastic Net": [
+      "en_full_macro",
+      "en_no_vix",
+      "en_no_macro",
+      "en_full_macro_har",
+      "en_no_vix_har",
+      "en_no_macro_har"
+    ],
+    "XGBoost": [
+      "xgb_full_macro",
+      "xgb_no_macro",
+      "xgb_no_vix",
+      "xgb_vix_only"
+    ]
+  },
+  "forecast_col": "fc_level",
+  "k_cap": 2,
+  "train_window": [
+    "2003-03",
+    "2008-02"
+  ],
+  "oos_window": [
+    "2009-02",
+    "2025-12"
+  ],
+  "tickers": [
+    "XLB",
+    "XLE",
+    "XLF",
+    "XLI",
+    "XLY"
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "selected": {
+    "Garch": [
+      "garch",
+      "garch_midas_baa10y"
+    ],
+    "HAR OLS": [
+      "ols_1m"
+    ],
+    "Elastic Net": [
+      "en_full_macro",
+      "en_no_macro",
+      "en_no_vix"
+    ],
+    "XGBoost": [
+      "xgb_full_macro",
+      "xgb_no_macro",
+      "xgb_no_vix",
+      "xgb_vix_only"
+    ]
+  },
+  "variants": [
+    "garch",
+    "garch_midas_baa10y",
+    "ols_1m",
+    "en_full_macro",
+    "en_no_macro",
+    "en_no_vix",
+    "xgb_full_macro",
+    "xgb_no_macro",
+    "xgb_no_vix",
+    "xgb_vix_only"
+  ],
+  "specs": [
+    "fixed",
+    "expanding"
+  ],
+  "forecast_col": "fc_level",
+  "k_cap": 2,
+  "train_window": [
+    "2003-03",
+    "2008-02"
+  ],
+  "oos_window": [
+    "2008-03",
+    "2025-12"
+  ],
+  "tickers": [
+    "XLB",
+    "XLE",
+    "XLF",
+    "XLI",
+    "XLY"
+  ]
+}

@@ -1,0 +1,160 @@
+{
+  "selected": {
+    "Historical": [
+      "hist_rw"
+    ],
+    "Garch": [
+      "garch",
+      "garch_midas_baa10y"
+    ],
+    "Elastic Net": [
+      "en_no_macro",
+      "en_no_vix",
+      "en_vix_only",
+      "en_full_macro"
+    ],
+    "XGBoost": [
+      "xgb_no_macro",
+      "xgb_no_vix",
+      "xgb_vix_only",
+      "xgb_full_macro"
+    ]
+  },
+  "variants": [
+    "hist_rw",
+    "garch",
+    "garch_midas_baa10y",
+    "en_no_macro",
+    "en_no_vix",
+    "en_vix_only",
+    "en_full_macro",
+    "xgb_no_macro",
+    "xgb_no_vix",
+    "xgb_vix_only",
+    "xgb_full_macro"
+  ],
+  "benchmark": "hist_rw",
+  "pairs": [
+    {
+      "pair": "B0.1",
+      "block": "B0",
+      "a": "garch",
+      "b": "hist_rw",
+      "isolates": "fitted GARCH vs naive history"
+    },
+    {
+      "pair": "B1.1",
+      "block": "B1",
+      "a": "garch_midas_baa10y",
+      "b": "garch",
+      "isolates": "credit spread (BAA10Y) as the long-run component"
+    },
+    {
+      "pair": "B2.1",
+      "block": "B2",
+      "a": "en_full_macro",
+      "b": "en_no_macro",
+      "isolates": "total effect of macro + VIX"
+    },
+    {
+      "pair": "B3.1",
+      "block": "B3",
+      "a": "en_full_macro",
+      "b": "en_no_vix",
+      "isolates": "VIX on top of the other macro variables"
+    },
+    {
+      "pair": "B3.2",
+      "block": "B3",
+      "a": "en_vix_only",
+      "b": "en_no_macro",
+      "isolates": "VIX on its own"
+    },
+    {
+      "pair": "B3.3",
+      "block": "B3",
+      "a": "en_full_macro",
+      "b": "en_vix_only",
+      "isolates": "other macro variables on top of VIX"
+    },
+    {
+      "pair": "B4.0",
+      "block": "B4",
+      "a": "xgb_full_macro",
+      "b": "xgb_no_macro",
+      "isolates": "total effect of macro + VIX"
+    },
+    {
+      "pair": "B4.1",
+      "block": "B4",
+      "a": "xgb_full_macro",
+      "b": "xgb_no_vix",
+      "isolates": "VIX on top of the other macro variables"
+    },
+    {
+      "pair": "B4.2",
+      "block": "B4",
+      "a": "xgb_vix_only",
+      "b": "xgb_no_macro",
+      "isolates": "VIX on its own"
+    },
+    {
+      "pair": "B4.3",
+      "block": "B4",
+      "a": "xgb_full_macro",
+      "b": "xgb_vix_only",
+      "isolates": "other macro variables on top of VIX"
+    },
+    {
+      "pair": "B5.1",
+      "block": "B5",
+      "a": "xgb_no_macro",
+      "b": "en_no_macro",
+      "isolates": "no macro"
+    },
+    {
+      "pair": "B5.2",
+      "block": "B5",
+      "a": "xgb_no_vix",
+      "b": "en_no_vix",
+      "isolates": "macro without VIX"
+    },
+    {
+      "pair": "B5.3",
+      "block": "B5",
+      "a": "xgb_vix_only",
+      "b": "en_vix_only",
+      "isolates": "VIX only"
+    },
+    {
+      "pair": "B5.4",
+      "block": "B5",
+      "a": "xgb_full_macro",
+      "b": "en_full_macro",
+      "isolates": "full macro + VIX"
+    }
+  ],
+  "skipped_pairs": [],
+  "specs": [
+    "fixed",
+    "expanding"
+  ],
+  "main_spec": "fixed",
+  "forecast_col": "fc_level",
+  "k_cap": 2,
+  "train_window": [
+    "2003-03",
+    "2008-02"
+  ],
+  "oos_window": [
+    "2008-03",
+    "2025-12"
+  ],
+  "tickers": [
+    "XLB",
+    "XLE",
+    "XLF",
+    "XLI",
+    "XLY"
+  ]
+}
